@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-08-15 13:06:18
+  play: 2019-08-15 13:06:18
+  price: 1
+  song: MyString
+  user_id: 1
+
+two:
+  date: 2019-08-15 13:06:18
+  play: 2019-08-15 13:06:18
+  price: 1
+  song: MyString
+  user_id: 1
