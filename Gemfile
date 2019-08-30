@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem "loofah"
 gem "dotenv-rails"
 group :development, :test do
   gem 'hirb'         # モデルの出力結果を表形式で表示するGem
