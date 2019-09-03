@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_15_074808) do
+ActiveRecord::Schema.define(version: 2019_09_02_104251) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.datetime "date"
+    t.integer "song_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_comments_on_song_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_likes_on_song_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
 
   create_table "songs", force: :cascade do |t|
     t.datetime "date"
@@ -20,6 +40,20 @@ ActiveRecord::Schema.define(version: 2019_08_15_074808) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "upload_lists", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_upload_lists_on_user_id"
+  end
+
+  create_table "uploadlists", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_uploadlists_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
