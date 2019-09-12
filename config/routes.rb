@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   resources :likes
   resources :uploadlists
   resources :comments
+  devise_for :users
   resources :users
   resources :songs
-  devise_for :users
+  
   # get 'songs/index'
   # get 'songs/show'
 
