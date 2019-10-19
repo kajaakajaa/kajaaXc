@@ -4,14 +4,45 @@
     <title>Xc</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%
+=begin%>
+ 　　　　　　↑レスポンシブに対応させるのに必要になる 
+<%
+=end%>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <%
+=begin%>
+ <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Features</a>
+        <a class="p-2 text-dark" href="#">Enterprise</a>
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div> 
+<%
+=end%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+
+ <h1><%= link_to xc_logo, root_path %></h1>
+      <%
+=begin%>
+ 　　　　　　　※↑”xc_logo”はhelper 
+<%
+=end%>
+
 
     <%= yield %>
   </body>

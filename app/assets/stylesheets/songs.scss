@@ -1,3 +1,44 @@
 // Place all the styles related to the songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 10px 20% 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+li {
+  padding-left: 100px;
+}
+
+// @media screen and (min-width: 600px) {
+
+// }
+
+
+// header_menu 
+.header_menu {
+  text-decoration: none;
+  // (↑アンダーバーのみ引数の必要あり)
+  margin-right: 50%;
+}
+
+.header_menu_2 {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+// hover //
+.header_menu:hover {
+  text-decoration: underline;
+}
+
+.header_menu_2:hover {
+  text-decoration: underline;
+}

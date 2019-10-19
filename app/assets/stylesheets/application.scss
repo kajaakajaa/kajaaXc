@@ -12,4 +12,28 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+ @import "bootstrap";
+
+
+ .notice {
+   margin: 0;
+ }
+
+.alert {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 10px 0 0 0;
+  width: 0;
+  height: 0;
+}
+
+.xc_logo {
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+}
+

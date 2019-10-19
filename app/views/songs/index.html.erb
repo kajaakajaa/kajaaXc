@@ -1,4 +1,12 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
 
-<li><%= link_to "log out", destroy_user_session_path, method: :delete %>
+<nav>
+  <ul>
+    <li>
+      <%= link_to "ログイン or アカウント作成", user_session_path, class: "header_menu" %>
+      <%= link_to "マイページ", users_path, class: "header_menu_2" %>
+      <%= link_to "曲検索", users_path, class: "header_menu_2" %>
+    </li>  
+  </ul>
+</nav>
+
+

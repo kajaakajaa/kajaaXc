@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+# bootstrap
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+
 gem "loofah"
 gem "dotenv-rails"
 group :development, :test do
