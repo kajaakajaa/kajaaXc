@@ -3,42 +3,79 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-  margin: 0;
-}
+
+
+
 
 ul {
-  padding: 10px 20% 0;
+  padding: 0;
+  margin: 0;
+  height: 70px;
   list-style: none;
   white-space: nowrap;
 }
-
 li {
-  padding-left: 100px;
+  display: inline;
+}
+hr {
+  border-top: 0;
 }
 
-// @media screen and (min-width: 600px) {
-
-// }
 
 
-// header_menu 
-.header_menu {
-  text-decoration: none;
-  // (↑アンダーバーのみ引数の必要あり)
-  margin-right: 50%;
+
+
+
+
+// 検索フォーム　（div）　ーーーーーーーーーーーーーーーーーーーー
+#input-search {
+  display: inline-block;
+  margin: 40px 0% 0% 15%;
+  padding: 0 50px 0 100px;
+  width: 55%;
+}
+// 検索box
+#search-box {
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  border-top: 0;
+  border-left: 1px;
+  box-shadow: 2px 2px 3px dimgrey;
 }
 
-.header_menu_2 {
-  text-decoration: none;
-  margin-right: 20px;
+// 検索button
+button {
+  height: 30px;
+  box-shadow: 2px 2px 3px dimgrey;
+}
+button[type="submit"]:focus {
+  border: 1px solid #8a9cff;
+  outline: none;
+}
+// 反転
+#search-box:hover {
+  background-color: rgb(241, 238, 238);
+}
+button:hover {
+  background-color: rgb(236, 235, 235);
+  border-color: rgb(105, 105, 105);
+}
+// 検索フォーム　ーーーーーーーーーーーーーーーーーーーー
+
+
+// log_in + mypageアイコン
+.header-icon {
+  margin-right: 4%;
+}
+// ↑　の　div
+#header-icon-block {
+  display: inline;
+  margin-left: 12%;
+}
+// 　↑　のサイズ
+.header_icon_size {
+  width: 25px;
+  height: 25px;
 }
 
-// hover //
-.header_menu:hover {
-  text-decoration: underline;
-}
-
-.header_menu_2:hover {
-  text-decoration: underline;
-}

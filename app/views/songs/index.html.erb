@@ -1,12 +1,16 @@
-
 <nav>
   <ul>
-    <li>
-      <%= link_to "ログイン or アカウント作成", user_session_path, class: "header_menu" %>
-      <%= link_to "マイページ", users_path, class: "header_menu_2" %>
-      <%= link_to "曲検索", users_path, class: "header_menu_2" %>
-    </li>  
+    <div id="input-search">
+      <%= form_with(url: songs_path, method: :get, local: true) do |f| %>
+        <%= f.button :type => "submit", title: "検索" do %>
+            <i class= "fas fa-search"></i>
+        <% end %>
+        <%= f.search_field :search, id: "search-box", placeholder: "タイトル or アーティスト名" %>
+      <% end %>
+    </div>
+    <div id="header-icon-block">
+      <li class= "header-icon"><%= link_to log_in, user_session_path %></li>
+      <li class= "header-icon"><%= link_to mypage, users_path %></li> 
+    </div>
   </ul>
 </nav>
-
-

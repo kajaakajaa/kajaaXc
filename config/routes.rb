@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
+  root 'songs#index'
+  devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  resources :users
+  resources :likes
+  resources :uploadlists
+  resources :comments
+  resources :songs
+  
   # get 'comments/edit'
-
   # get 'uploadlists/index'
   # get 'likes/index'
   # get 'likes/show'
@@ -8,18 +18,7 @@ Rails.application.routes.draw do
   # get 'users/index'
   # get 'users/show'
   # get 'users/new'
-
-  resources :likes
-  resources :uploadlists
-  resources :comments
-  devise_for :users
-  resources :users
-  resources :songs
-  
-  # get 'songs/index'
-  # get 'songs/show'
+  # post "songs/create", to: "songs#create"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'songs#index'
-
 end

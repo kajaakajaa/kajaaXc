@@ -1,2 +1,11 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+ <% @songs.each do |song| %>
+  <p>
+    <%= song.name %><br>
+    <%= image_tag song.image.url %>
+  </p>
+<% end %>
+<%= form_with(url: songs_path, method: :post, local: true) do |f| %>
+  <p><%=f.label "投稿者" %><br><%= f.text_field :name, placeholder: 'ハンドルネーム' %></p>
+  <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
+  <p><%= f.submit "投稿" %></p>
+<% end %> 
