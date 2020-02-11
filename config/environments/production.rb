@@ -94,3 +94,4 @@ Rails.application.configure do
 end
 
 config.log_level = :warn
+config.assets.digest = true
