@@ -4,8 +4,8 @@
     <%= image_tag song.image.url %>
   </p>
 <% end %>
-<%= form_with(url: songs_path, method: :post, local: true) do |f| %>
+<%= form_with(url: songs_create_path, method: :post, local: true) do |f| %>
   <p><%=f.label "投稿者" %><br><%= f.text_field :name, placeholder: 'ハンドルネーム' %></p>
   <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
-  <p><%= f.submit "投稿" %></p>
+  <p><%= f.submit value: "投稿" %></p>
 <% end %> 

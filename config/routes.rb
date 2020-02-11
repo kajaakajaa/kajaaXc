@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :uploadlists
   resources :comments
   resources :songs
+  get '/songs', to: 'songs#show'
+  post '/songs/create', to: 'songs#create'
   
   # get 'comments/edit'
   # get 'uploadlists/index'
