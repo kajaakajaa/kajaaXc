@@ -1,2 +1,2 @@
 ja:
-  test: "%{arg1}テスト%{arg2}" #　※"arg"は変数
+  hello: "こんにちわ"

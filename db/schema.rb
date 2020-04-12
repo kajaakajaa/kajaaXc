@@ -44,13 +44,6 @@ ActiveRecord::Schema.define(version: 2019_11_18_121943) do
     t.string "name"
   end
 
-  create_table "upload_lists", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_upload_lists_on_user_id"
-  end
-
   create_table "uploadlists", force: :cascade do |t|
     t.integer "user_id"
     t.datetime "created_at", null: false
