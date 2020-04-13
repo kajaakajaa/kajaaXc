@@ -1,7 +1,12 @@
-<div class="mypage">
-  <ul>
-    <li><%= link_to "アップリスト", uploadlists_path, id: "uplist_tag" %></li>
-    <li><%= link_to "アップロード", new_song_path %></li>
+<div class="mypage_div">
+  <ul class="mypage_ul">
+    <li id="uplist_li" ><%= link_to "アップリスト", uploadlists_path %></li>
+    <li id="favorite_li" ><%= link_to "お気に入り", likes_path %></li>
+    <li id="logout_li" ><%= link_to "ログアウト", users_sign_out_path %></li>
+  </ul>
+  <ul class="mypage_ul">
+    <li id="upload_li" ><%= link_to "アップロード", new_song_path %></li>
+    <li id="profile_li" ><%= link_to "プロフィール", new_user_path %></li>
   </ul>
 </div>
 

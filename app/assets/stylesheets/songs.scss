@@ -4,10 +4,14 @@
 
 
 
-
-
-
-
+// topページのbar。
+#top_bar {
+  padding: 0;
+  margin: 0;
+  height: 70px;
+  list-style: none;
+  white-space: nowrap;
+}
 
 // 検索フォーム　（div）　ーーーーーーーーーーーーーーーーーーーー
 #input-search {
@@ -49,6 +53,7 @@ button:hover {
 // log_in + mypageアイコン
 .header-icon {
   margin-right: 4%;
+  display: inline;
 }
 // ↑　の　div
 #header-icon-block {
