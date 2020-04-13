@@ -3,10 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.mypage {
-  width: 500px;
+.mypage_div {
+  position: relative;
+  top: 100px;
+  margin: 0 auto;  // <= "div" に "margin: 0 auto;" 設定すると"divブロック"を中央寄せする。
+  width: 60%;
+  height: 400px;
 }
 
-// #uplist_tag {
-//   margin: 30%;
-// }
+.mypage_ul {
+  list-style: none;
+  position: relative;
+  top: 30px;
+}
+
+#uplist_li, #favorite_li,
+#logout_li {
+  font-size: 30px;
+  margin: 0 50px 80px 0;
+  width: 180px;
+}
+
+#upload_li, #profile_li {
+  font-size: 30px;
+  width: 180px;
+}
+
